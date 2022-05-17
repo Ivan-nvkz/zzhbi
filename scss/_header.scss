@@ -169,7 +169,6 @@
    display: none;
  }
 }
-
 .top-contacts__phone-mobile,
 .top-contacts__mail-mobile {
    display: none;
@@ -295,7 +294,7 @@
 @media (max-width: 1000px) {
 .search-header__input {
    @include adaptiv-value("width", 1045, 10, 0);
-    @include adaptiv-value("height", 45, 35, 0);
+   @include adaptiv-value("height", 45, 35, 0);
  }
 }
 @media (max-width: 900px) {
