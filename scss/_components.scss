@@ -23,7 +23,7 @@
 // Заголовок секции ======================================
 // =======================================================
 
-// Карточка каталога =========================================
+// Карточка каталога  на главной странице =========================================
 .section-catalog__card{
    margin-top: 50px;
    margin-bottom: 150px;
@@ -262,7 +262,7 @@
    padding-left: 13px;
    padding-right:18px;
 }
-// Карточка каталога ====================================
+// Карточка каталога  на главной странице =========================================
 
 // Большая кнопка    ====================================
 .large-button__block{
@@ -308,6 +308,156 @@
 }
 
 // Большая кнопка    ====================================
+
+
+// Хлебные крошки в каталоге     ====================================
+.breadcrumbs {
+    margin-top: 24px;
+    margin-bottom: 56px;
+}
+@media (max-width: 1300px) {
+   .breadcrumbs {
+      @include adaptiv-value("margin-top", 24, 0, 0);
+      @include adaptiv-value("margin-bottom", 56, 24, 0);
+ }
+}
+.breadcrumbs__list-item {
+   display: inline-block;
+   margin-right: 32px;
+   position: relative;
+   font-family: 'Stolzl Book';
+   font-weight: 400;
+   font-size: 12px;
+   line-height: 1;
+   color: #fff;
+   letter-spacing: 2px;
+   //  text-transform: lowercase;
+   text-transform: uppercase;
+}
+ .breadcrumbs__list-item:first-letter{
+//    text-transform: uppercase;
+}
+.breadcrumbs__list-item::after {
+   content:url("../images/icons/breadcrumbs-line.svg");
+   position: absolute;
+   right: -15px;
+   bottom: 7px;
+   width: 6px;
+   height: 9px;
+}
+
+.breadcrumbs__list-item:last-child::after {
+   display: none;
+}
+.breadcrumbs__list-item-link--orange{
+   color: #FF7A00;
+}
+.breadcrumbs__list-item-link--great{
+   color: #fff;
+   opacity: 0.7;
+   transition: all 0.3s;
+}
+.breadcrumbs__list-item-link--great:hover{
+   color: #FF7A00;
+   opacity: 1;
+   transition: all 0.3s;
+}
+// АДАПТИВ start ===================================================================================================
+@media (max-width: 1100px){
+   .mobile-overflow {
+      width: 1500px;
+   }
+   .breadcrumbs__inner{
+      overflow-x: scroll;
+   }
+}
+// Хлебные крошки в каталоге     =========================================
+// Большой заголовок на страницах     ====================================
+.pages-big-title__block {
+   padding-bottom: 32px;
+}
+@media (max-width: 1300px) {
+   .pages-big-title__block {
+      @include adaptiv-value("padding-bottom", 32, 24, 0); 
+   }
+}
+.section-big__title {
+   font-size: 48px;
+   line-height: 1.2;
+   font-weight: 500;
+   color:rgba(255, 255, 255, 1);
+}
+@media (max-width: 1300px){
+   .section-big__title {
+      @include adaptiv-value("font-size", 48, 24, 0); 
+   }
+}
+// Большой заголовок на страницах     ==========================================
+// Карточка товара  на странице Каталог     ====================================
+@media (max-width: 1270px){
+   .catalog-pages-catalog__item-card {
+      flex: 0 1 33.33333%;
+   }
+}
+@media (max-width: 610px){
+   .catalog-pages-catalog__item-card {
+      flex: 0 1 50%;
+   }
+}
+.card__title-catalog-pages {
+   min-width: 248px;
+   font-size: 24px;
+   font-weight: 400;
+   line-height: 1.2;
+   text-align: left;
+   padding-bottom: 32px;
+   padding-top: 12px;
+}
+@media (max-width: 1300px){
+   .card__title-catalog-pages {
+      @include adaptiv-value("font-size", 24, 13, 0); 
+      @include adaptiv-value("padding-bottom", 32, 0, 0); 
+      @include adaptiv-value("padding-top", 12, 0, 0); 
+   }
+}
+@media (max-width: 870px){
+   .card__title-catalog-pages {
+      min-width: min-content;
+   }
+}
+.orange-number {
+   color: #F4450D;
+}
+
+// Карточка товара  на странице Каталог     ====================================
+// Карточка товара  на странице Раскрытый  Каталог     ====================================
+.catalog__open-item-card {
+   flex: 0 1 33.33333%;
+}
+@media (max-width: 1050px) {
+   .catalog__open-item-card {
+      flex: 0 1 50%;
+   }
+}
+@media (max-width: 700px) {
+   .catalog__open-item-card {
+      flex: 0 1 100%;
+   }
+}
+@media (max-width: 600px) {
+   .catalog__open-item-card {
+      flex: 0 1 50%;
+   }
+}
+// Карточка товара  на странице Раскрытый  Каталог     ====================================
+
+
+
+
+
+
+
+
 
 // АДАПТИВ start ===================================================================================================
 @media (max-width: 1300px){

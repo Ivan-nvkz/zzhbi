@@ -1,0 +1,159 @@
+.catalog__open-body{
+   display: flex;
+   justify-content: space-between;
+}
+@media (max-width: 600px) {
+   .catalog__open-body{
+      flex-wrap: wrap;
+   }
+}
+.catalog-open__big-title {
+   font-size: 32px;
+}
+@media (max-width: 1300px) {
+   .catalog-open__big-title {
+      @include adaptiv-value("font-size", 32, 18, 0);
+   }
+}
+.catalog__open-body-aside {
+   min-width: 296px;
+   margin-right: 24px;
+   border: 1px solid #3B4C64;
+   height: 100%;
+}
+@media (max-width: 1300px) {
+   .catalog__open-body-aside {
+      @include adaptiv-value("margin-right", 24, 0, 0);
+   }
+}
+@media (max-width: 600px) {
+   .catalog__open-body-aside {
+      min-width: 100%;
+      padding-bottom: 15px;
+      border-bottom: none;
+   }
+}
+@media (max-width: 600px) {
+   .aside__inner {
+      border: 1px solid #3B4C64;
+   }
+}
+.aside__list {
+   display: block;
+   font-size: 16px;
+   color: #fff;
+}
+.aside__item {
+   border-bottom: 1px solid #3B4C64;
+}
+.aside__item:last-child{
+   border-bottom: none;
+}
+@media (max-width: 600px) {
+   .aside__item {
+      border-bottom: none;
+      border-top: 1px solid #3B4C64;
+   }
+   .aside__item:first-child{
+      border-top: none;
+   }
+}
+.aside-card__title {
+   min-width: 313px;
+   padding: 20px 24px;
+   transition: all 0.3s;
+}
+@media (max-width: 1300px){
+   .aside-card__title {
+      @include adaptiv-value("padding-top", 20, 10, 0);
+      @include adaptiv-value("padding-bottom", 20, 10, 0);
+      @include adaptiv-value("padding-left", 24, 12, 0);
+      @include adaptiv-value("padding-right", 24, 48, 0);
+   }
+}
+@media (max-width: 700px){
+   .aside-card__title{
+      @include adaptiv-value("font-size", 18, 16, 0);
+   }
+}
+.aside-card__title:hover{
+   color: #FF7A00;
+   transition: all 0.3s;
+}
+.catalog-open__card-items{
+   height: 100%;
+}
+.catalog-open__title{
+   max-width: 216px;
+}
+@media (max-width: 600px){
+   .catalog-open__title {
+      @include adaptiv-value("font-size", 18, 14, 0);
+   }
+   
+}
+//    СПОЙЛЕР  catalog-open  start  -----------------------------------------------------------------------------------
+.catalog-open__btn{
+   display: none;
+}
+@media (max-width: 600px){
+.catalog-open__spoller-box {
+   margin-left: 15px;
+   margin-right: 15px;
+}
+   .catalog-open__body-inner{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+   }
+   .block__title{
+      width: 100%;
+      position: relative;
+   }
+   .block._spoller-init .block__title{
+     cursor: pointer;
+    }
+    .catalog-open__btn.block__title::after{
+      content: url("../images/icons/arrow-down-orange.svg");
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      width: 24px;
+      height: 24px;
+      transition: transform 0.3s ease 0s;
+   }
+   .block._spoller-init .block__title::after {
+      transform: rotate(180deg);
+    }
+    .block._spoller-init .block__title._spoller-active::after {
+      transform: rotate(0deg);
+    }
+   .catalog-open__btn {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0;
+      margin: 0;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      margin-bottom: 5px;
+      margin-top: 15px;
+      font-weight: 300;
+      text-transform: uppercase;
+      font-size: 15px;
+      background: #182841;
+      color: #fff;
+      // padding: 30px 55px;
+      @include adaptiv-value("padding-top", 10, 5, 0);
+      @include adaptiv-value("padding-bottom", 10, 5, 0);
+      @include adaptiv-value("padding-left", 10, 18, 0);
+      @include adaptiv-value("padding-right", 10, 18, 0);
+      border-radius: 2px;
+      text-align: center;
+         // @include adaptiv-value("min-width", 330, 290, 0);
+       border: 1px solid #3B4C64;
+   }
+}
+//    СПОЙЛЕР end   catalog-open        -------------------------------------------------------------------------------------
+

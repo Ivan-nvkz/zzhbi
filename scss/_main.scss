@@ -240,7 +240,8 @@
 }
 @media (max-width: 1070px) {
    .benefits__item-title {
-      max-width: 0px;
+      // max-width: 0px;
+      max-width: min-content;
       min-width: 199px;
    }
 }
@@ -728,12 +729,19 @@
 .footer-menu__item-catalog {
    display: inline-flex;
 }
+@media (max-width: 435px){
+   .footer-menu__link-catalog{
+       margin-left: 5px;
+   }
+}
+
 .footer__body-price {
    margin-left: 24px;
 }
 @media (max-width: 600px) {
    .footer__body-price {
       display: inline;
+      margin-left: 0px;
    }
 }
 // =============================================================================================================

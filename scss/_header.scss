@@ -1,3 +1,29 @@
+//  Кнопка наверх ====================================================================
+.btn__up{
+   background: rgba(47, 62, 84, 0.8);
+   border: 1px solid #BF0000;
+   color: #fff;
+   line-height: 50px;
+   height: 50px;
+   width: 50px;
+   border-radius: 30%;
+   text-align: center;
+   position: fixed;
+   right: 20px;
+   bottom: 10px;
+   cursor: pointer;
+   opacity: 0;
+   transition: opacity 0.5s;
+   pointer-events: none;
+   z-index: 3000;
+   font-size: 30px;
+}
+.btn__up-open{
+   opacity: 1;
+   pointer-events: all;
+}
+//  Кнопка наверх ====================================================================
+
 //Burger   start  =======================================================================
 .icon-menu {
    display: none;
@@ -60,21 +86,45 @@
 }
 @media (max-width: 500px) {
  .wrapper {
-   margin-top: 80px;
+   margin-top: 60px;
  }
 }
 .header {
-   background-color: #0C1D37;
-   background-image: url('../images/header-bg.png');
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-position: center;
-   background-position-x: 50%;
-   margin-bottom:100px;
+  background-color: rgba(6, 15, 31, 0.5);
+   //  background-color: #0C1D37;
+   // background-image: url('../images/header-bg.png');
+   //  background-repeat: no-repeat;
+   //  background-size: cover;
+   //  background-position: center;
+   //  background-position-x: 50%;
+     margin-bottom:100px;
+     z-index: 100;
+// 
+   //  background: radial-gradient(50% 50% at 50% 50%,hsla(197deg,100%,45%,.5) 0,rgba(196,196,196,0) 100%);
+// 
 }
 @media (max-width: 1300px) {
 .header {
     @include adaptiv-value("margin-bottom", 100, 45, 0); 
+   }
+}
+.header__color-circle{
+   position: relative;
+   overflow: hidden;
+}
+.header__orange-bg {
+   position: absolute;
+   z-index: -1;
+   top: -30%;
+   right: 15%;
+   width: 1000px;
+   height: 1000px;
+   background: radial-gradient(50% 50% at 50% 50%,hsla(29deg,100%,50%,.5) 0,rgba(196,196,196,0) 100%); 
+}
+@media (max-width: 1300px){
+   .header__orange-bg {
+      @include adaptiv-value("top", -202.188, -600, 0); 
+      @include adaptiv-value("right", 195, -500, 0); 
    }
 }
 @media (max-width: 500px) {
@@ -382,6 +432,7 @@
    .header__body-price::before{
       left: -30px;
       top: 15px;
+      display: none;
    }
 }
 .header__body-price:hover {
@@ -459,7 +510,6 @@
    overflow: auto;
    min-height: 100%;
    display: block;
-   
  }
 .menu__list.menu__list--active {
    transform: translateX(0%);
@@ -485,6 +535,11 @@
 }
 .menu__item  + .menu__item  {
    margin-left: 50px;
+}
+@media (max-width: 1300px) {
+   .menu__item  + .menu__item  {
+      @include adaptiv-value("margin-left", 50, 7, 0);
+ }
 }
 @media (max-width: 700px) {
    .menu__item  + .menu__item  {
@@ -539,8 +594,9 @@ align-items: flex-end;
 }
 @media (max-width: 700px) {
 .menu__item-catalog {
-   display: inline-flex;
-   padding-left: 5px;
+   // display: inline-flex;
+   display: inline-block;
+   // padding-left: 34px;
  }
 }
 .menu__link-img {
@@ -564,6 +620,11 @@ align-items: flex-end;
 .menu__link-catalog:hover svg path{
    stroke: #F55800;
    transition: all .3s;
+}
+@media (max-width: 700px) {
+   .menu__link-catalog svg {
+      display: none;
+   }
 }
 .header__content-inner {
    display: flex;

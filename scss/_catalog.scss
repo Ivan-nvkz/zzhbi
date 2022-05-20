@@ -1,0 +1,17 @@
+.header-catalog{
+    background-color: #0C1D37;
+    margin-bottom: 0;
+}
+@media (max-width: 400px) {
+.header__top-catalog {
+   border-bottom: 1px solid #3B4C64;
+ }
+}
+.catalog-pages {
+    margin-bottom: 100px;
+}
+@media (max-width: 1300px) {
+.catalog-pages {
+   @include adaptiv-value("margin-bottom", 100, 65, 0); 
+ }
+}
