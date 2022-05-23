@@ -1,0 +1,67 @@
+// news-page__section start =========================================
+
+.more-news__items {
+   display: flex;
+   flex-wrap: wrap;
+   min-height: 100%;
+   border: 1px solid #3B4C64;
+   border-bottom: none;
+   border-right: none;
+}
+.more-news__item,
+.more-news__item-bottom  {
+   display: flex;
+   flex-direction: column;
+   flex: 0 1 25%;
+   border: none;
+   border-right: 1px solid #3B4C64;
+   border-bottom: 1px solid #3B4C64;
+}
+.more-news__item-bottom {
+   margin-bottom: 1px;
+}
+@media (max-width: 1200px) {
+   .more-news__item ,
+   .more-news__item-bottom {
+      flex: 0 1 33.3333333%;
+   }
+}
+@media (max-width: 850px) {
+   .more-news__item,
+   .more-news__item-bottom {
+      flex: 0 1 50%;
+   }
+}
+@media (max-width: 550px) {
+   .more-news__item,
+   .more-news__item-bottom {
+      flex: 0 1 100%;
+   }
+}
+
+//  Показать ещё   start  ==================================================
+.reviews-all-more__panel{
+   margin-bottom: 50px;
+   margin-top: -1px;
+}
+.panel-wrapper {
+   display: flex;
+   overflow: hidden;
+   max-height: 0;
+   transition: max-height 0.5s ease-out;
+   border-right: none;
+}
+//  Показать ещё    end  ====================================================
+.news-page__large-button {
+   cursor: pointer;
+}
+.news-page__large-button:hover svg path {
+   stroke: #FF7A00;
+   fill: #FF7A00;
+   transition: all .3s;
+}
+.news-page__large-button:hover svg circle{
+   stroke: #FF7A00;
+   transition: all .3s;
+}
+// news-page__section end   =========================================

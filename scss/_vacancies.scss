@@ -1,0 +1,49 @@
+// section vacancies  start  ======================================
+.vacancies {
+   margin-bottom: 100px;
+}
+@media (max-width: 1300px) {
+   .vacancies {
+      @include adaptiv-value("margin-bottom", 100, 70, 0);
+   }
+}
+.vacancies__card-items{
+   display: flex;
+   flex-wrap: wrap;
+}
+.vacancies__card-item {
+   flex: 0 1 25%;
+}
+@media (max-width: 900px) {
+   .vacancies__card-item  {
+      flex: 0 1 33.33333%;
+   }
+}
+@media (max-width: 650px) {
+   .vacancies__card-item  {
+      flex: 0 1 50%;
+   }
+}
+@media (max-width: 380px) {
+   .vacancies__card-item  {
+      flex: 0 1 100%;
+   }
+}
+.vacancies__title {
+   flex:1 1 auto;
+   max-width: 256px;
+   font-size: 20px;
+   line-height: 1.2;
+   font-weight: 500;
+}
+.vacancies__title::first-letter{
+   text-transform: uppercase;
+}
+.vacancies-card__description {
+    
+   max-width: 256px;
+   font-size: 15px;
+   line-height: 1.4;
+   color: #9EA5AF;
+}
+// section vacancies  start  ======================================

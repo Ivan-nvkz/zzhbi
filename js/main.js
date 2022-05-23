@@ -1,6 +1,7 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
+
    // Плавный скролл кнопки наверх  ====================================================
    let btnUp = document.querySelector('.btn__up');
 
