@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
    points.forEach(({ lat, lng, title }) => {
       const icon = L.icon({
-         iconUrl: "../images/icons/map.svg",
+         iconUrl: "images/icons/map.svg",
          iconSize: [165, 38],
          iconAnchor: [30, 0],
       });
