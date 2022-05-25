@@ -470,12 +470,48 @@ $(document).ready(function () {
 
 // Slick slider start ====================================================================
 $(function () {
-   $('.your-class').slick({
-      dots: true,
+   // $('.your-class').slick({
+   //    dots: true,
+   // });
+
+
+
+
+   $('.stock__slider-big').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      fade: false,
+      speed: 800,
+      waitForAnimate: false,
+      centerMode: false,
+      asNavFor: '.stock__slider-small',
+      // infinite: true,
+   });
+   $('.stock__slider-small').slick({
+      slidesToShow: 7,
+      slidesToScroll: 1,
+      asNavFor: '.stock__slider-big',
+      dots: false,
+      arrows: false,
+      focusOnSelect: true,
+      responsive: [
+         {
+            breakpoint: 768,
+            settings: {
+               slidesToShow: 6
+            }
+         },
+         {
+            breakpoint: 480,
+            settings: {
+               slidesToShow: 5
+            }
+         }
+      ]
    });
 
 });
-
 // Slick slider finish ====================================================================
 
 //=====  JQuery  finish ===================================================================
